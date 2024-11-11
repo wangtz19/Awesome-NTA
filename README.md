@@ -9,7 +9,7 @@ TBD
 ## Papers
 ### Survey
 - SoK: A Critical Evaluation of Efficient Website Fingerprinting Defenses `S&P 2023` [[paper](https://ieeexplore.ieee.org/document/10179289)]
-- SoK: Pragmatic Assessment of Machine Learning for Network Intrusion Detection, `EuroS&P 2923` [[paper](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10190520)] [[code](https://github.com/hihey54/pragmaticAssessment)]
+- SoK: Pragmatic Assessment of Machine Learning for Network Intrusion Detection, `EuroS&P 2023` [[paper](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10190520)] [[code](https://github.com/hihey54/pragmaticAssessment)]
 
 ### Network Traffic Classification
 #### Offline: Pre-trained Models
@@ -49,7 +49,49 @@ TBD
 - Locality Matters! Traffic Demand Modeling in Datacenter Networks, `APNET 2022` [[paper](https://conferences.sigcomm.org/events/apnet2022/papers/Locality%20Matters!%20Traffic%20Demand%20Modeling%20in%20Datacenter%20Networks.pdf)]
 
 ### Network Intrusion Detection
-TBD
+#### Offline: DL/ML
+- Trident: A Universal Framework for Fine-Grained and Class-Incremental Unknown Traffic Detection, `WWW 2024` [[paper](https://dl.acm.org/doi/10.1145/3589334.3645407)] [[code](https://github.com/Secbrain/Trident/)]
+- ContraMTD: An Unsupervised Malicious Network Traffic Detection Method based on Contrastive Learning, `WWW 2024` [[paper](https://dl.acm.org/doi/10.1145/3589334.3645479)]
+- Mateen: Adaptive Ensemble Learning for Network Anomaly Detection, `RAID 2024` [[paper](https://dl.acm.org/doi/10.1145/3678890.3678901)] [[code](https://github.com/ICL-ml4csec/Mateen/)]
+- ReCDA: Concept Drift Adaptation with Representation Enhancement for Network Intrusion Detection, `KDD 2024` [[paper](https://dl.acm.org/doi/10.1145/3637528.3672007)]
+- Proteus: A Difficulty-aware Deep Learning Framework for Real-time Malicious Traffic Detection, `ICNP 2024`
+- SPIDER: A Semi-Supervised Continual Learning-based Network Intrusion Detection System, `Infocom 2024` [[paper](https://ieeexplore.ieee.org/document/10621428)]
+- AOC-IDS: Autonomous Online Framework with Contrastive Learning for Intrusion Detection, `Infocom 2024` [[paper](https://arxiv.org/abs/2402.01807)] [[code](https://github.com/xinchen930/AOC-IDS)]
+- Relative Frequency-Rank Encoding for Unsupervised Network Anomaly Detection, `ToN 2024` [[paper](https://ieeexplore.ieee.org/document/10517994)]
+- FOSS: Towards Fine-Grained Unknown Class Detection Against the Open-Set Attack Spectrum With Variable Legitimate Traffic, `ToN 2024` [[paper](https://ieeexplore.ieee.org/document/10638516)]
+- TMG-GAN: Generative Adversarial Networks-Based Imbalanced Learning for Network Intrusion Detection, `ToN 2024` [[paper](https://ieeexplore.ieee.org/document/10312801)]
+- RFG-HELAD: A Robust Fine-Grained Network Traffic Anomaly Detection Model Based on Heterogeneous Ensemble Learning, `TIFS 2024` [[paper](https://ieeexplore.ieee.org/document/10534080)]
+- ProGen: Projection-Based Adversarial Attack Generation Against Network Intrusion Detection, `TIFS 2024` [[paper](https://ieeexplore.ieee.org/document/10531273)]
+- Online Self-Supervised Deep Learning for Intrusion Detection Systems, `TIFS 2024` [[paper](https://ieeexplore.ieee.org/document/10531267)]
+- K-GetNID: Knowledge-Guided Graphs for Early and Transferable Network Intrusion Detection, `TIFS 2024` [[paper](https://ieeexplore.ieee.org/document/10605850)]
+- ECNet: Robust Malicious Network Traffic Detection With Multi-View Feature and Confidence Mechanism, `TIFS 2024` [[paper](https://ieeexplore.ieee.org/document/10592040)]
+- ProGraph: Robust Network Traffic Identification With Graph Propagation, `ToN 2023` [[paper](https://ieeexplore.ieee.org/document/9933044)]
+- Augmented Memory Replay-based Continual Learning Approaches for Network Intrusion Detection, `NeurIPS 2023` [[paper](https://proceedings.neurips.cc/paper_files/paper/2023/file/3755a02b1035fbadd5f93a022170e46f-Paper-Conference.pdf)]
+- Point Cloud Analysis for ML-Based Malicious Traffic Detection: Reducing Majorities of False Positive Alarms, `CCS 2023` [[paper](https://dl.acm.org/doi/10.1145/3576915.3616631)]
+- FARE: Enabling Fine-grained Attack Categorization under Low-quality Labeled Data, `NDSS 2021` [[paper](https://www.ndss-symposium.org/ndss-paper/fare-enabling-fine-grained-attack-categorization-under-low-quality-labeled-data/)]
+- Throwing Darts in the Dark? Detecting Bots with Limited Data using Neural Data Augmentation, `S&P 2020` [[paper](https://ieeexplore.ieee.org/document/9152805)]
+
+#### Online: DL/ML
+- NetVigil: Robust and Low-Cost Anomaly Detection for East-West Data Center Security, `NSDI 2024` [[paper](https://www.usenix.org/system/files/nsdi24-hsieh.pdf)] [[code](https://github.com/microsoft/Yatesbury)]
+- RIDS: Towards Advanced IDS via RNN Model and Programmable Switches Co-Designed Approaches, `Infocom 2024` [[paper](https://ieeexplore.ieee.org/document/10621290)] [[code](https://github.com/Secbrain/RIDS/)]
+- Genos: General In-Network Unsupervised Intrusion Detection by Rule Extraction, `Infocom 2024` [[paper](https://arxiv.org/abs/2403.19248)]
+- HorusEye: A Realtime IoT Malicious Traffic Detection Framework using Programmable Switches, `Security 2023` [[paper](https://www.usenix.org/conference/usenixsecurity23/presentation/dong-yutao)] [[code](https://github.com/vicTorKd/HorusEye)]
+- Detecting Unknown Encrypted Malicious Traffic in Real Time via Flow Interaction Graph Analysis, `NDSS 2023` [[paper](https://www.ndss-symposium.org/ndss-paper/detecting-unknown-encrypted-malicious-traffic-in-real-time-via-flow-interaction-graph-analysis/)] [[code](https://github.com/fuchuanpu/HyperVision)]
+- Kitsune: An Ensemble of Autoencoders for Online Network Intrusion Detection, `NDSS 2018` [[paper](https://www.ndss-symposium.org/wp-content/uploads/2018/02/ndss2018_03A-3_Mirsky_paper.pdf)] [[code](https://github.com/ymirsky/KitNET-py)]
+
+#### Robustness
+- Low-Quality Training Data Only? A Robust Framework for Detecting Encrypted Malicious Network Traffic, `NDSS 2024` [[paper](https://www.ndss-symposium.org/wp-content/uploads/2024/10/ndss2024-81-slides.pdf)] [[code](https://github.com/XXnormal/RAPIER)]
+- BARS: Local Robustness Certification for Deep Learning based Traffic Analysis Systems, `NDSS 2023` [[paper](https://www.ndss-symposium.org/ndss-paper/bars-local-robustness-certification-for-deep-learning-based-traffic-analysis-systems/)] [[code](https://github.com/KaiWangGitHub/BARS)]
+- Anomaly Detection in the Open World: Normality Shift Detection, Explanation, and Adaptation, `NDSS 2023` [[paper](https://www.ndss-symposium.org/ndss-paper/anomaly-detection-in-the-open-world-normality-shift-detection-explanation-and-adaptation/)] [[code](https://github.com/dongtsi/OWAD)]
+- CADE: Detecting and Explaining Concept Drift Samples for Security Applications, `Security 2021` [[paper](https://www.usenix.org/conference/usenixsecurity21/presentation/yang-limin)] [[code](https://github.com/whyisyoung/CADE)]
+
+
+#### Explainability
+- xNIDS: Explaining Deep Learning-based Network Intrusion Detection Systems for Active Intrusion Responses, `Security 2023` [[paper](https://www.usenix.org/conference/usenixsecurity23/presentation/wei-feng)] [[code](https://github.com/CactiLab/code-xNIDS)]
+- Towards Understanding Alerts raised by Unsupervised Network
+Intrusion Detection Systems, `RAID 2023` [[paper](https://dl.acm.org/doi/10.1145/3607199.3607247)]
+- AI/ML for Network Security: The Emperor has no Clothes, `CCS 2022` [[paper](https://dl.acm.org/doi/10.1145/3548606.3560609)] [[code](https://github.com/TrusteeML/trustee)]
+
 
 ### Website Fingerprinting
 TBD
