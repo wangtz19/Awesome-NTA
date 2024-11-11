@@ -4,7 +4,19 @@ A curation of awesome papers, datasets and tools about network traffic analysis.
 </div>
 
 ## Table of Contents
-TBD
+- [Papers](#papers)
+    - [Survey](#survey)
+    - [Network Traffic Classification](#network-traffic-classification)
+        - [Offline: Pre-trained Models](#offline-pre-trained-models)
+        - [Offline: DL/ML](#offline-dlml)
+        - [Online: DL/ML](#online-dlml)
+    - [Network Traffic Generation](#network-traffic-generation)
+    - [Network Intrusion Detection](#network-intrusion-detection)
+        - [Offline: DL/ML](#offline-dlml-1)
+        - [Online: DL/ML](#online-dlml-1)
+        - [Robustness](#robustness)
+        - [Explainability](#explainability)
+    - [Website Fingerprinting](#website-fingerprinting)
 
 ## Papers
 ### Survey
