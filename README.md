@@ -89,7 +89,7 @@ A curation of awesome papers, datasets and tools about network traffic analysis.
 - Genos: General In-Network Unsupervised Intrusion Detection by Rule Extraction, `Infocom 2024` [[paper](https://arxiv.org/abs/2403.19248)]
 - HorusEye: A Realtime IoT Malicious Traffic Detection Framework using Programmable Switches, `Security 2023` [[paper](https://www.usenix.org/conference/usenixsecurity23/presentation/dong-yutao)] [[code](https://github.com/vicTorKd/HorusEye)]
 - Detecting Unknown Encrypted Malicious Traffic in Real Time via Flow Interaction Graph Analysis, `NDSS 2023` [[paper](https://www.ndss-symposium.org/ndss-paper/detecting-unknown-encrypted-malicious-traffic-in-real-time-via-flow-interaction-graph-analysis/)] [[code](https://github.com/fuchuanpu/HyperVision)]
-- Kitsune: An Ensemble of Autoencoders for Online Network Intrusion Detection, `NDSS 2018` [[paper](https://www.ndss-symposium.org/wp-content/uploads/2018/02/ndss2018_03A-3_Mirsky_paper.pdf)] [[code](https://github.com/ymirsky/KitNET-py)]
+- Kitsune: An Ensemble of Autoencoders for Online Network Intrusion Detection, `NDSS 2018` [[paper](https://www.ndss-symposium.org/wp-content/uploads/2018/02/ndss2018_03A-3_Mirsky_paper.pdf)] [[code](https://github.com/ymirsky/Kitsune-py)]
 
 #### Robustness
 - Low-Quality Training Data Only? A Robust Framework for Detecting Encrypted Malicious Network Traffic, `NDSS 2024` [[paper](https://www.ndss-symposium.org/wp-content/uploads/2024/10/ndss2024-81-slides.pdf)] [[code](https://github.com/XXnormal/RAPIER)]
