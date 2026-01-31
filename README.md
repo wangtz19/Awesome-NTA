@@ -20,8 +20,9 @@ A curation of awesome papers, datasets and tools about network traffic analysis.
 
 ## Papers
 ### Survey
-- SoK: A Critical Evaluation of Efficient Website Fingerprinting Defenses `S&P 2023` [[paper](https://ieeexplore.ieee.org/document/10179289)]
+- SoK: A Critical Evaluation of Efficient Website Fingerprinting Defenses, `S&P 2023` [[paper](https://ieeexplore.ieee.org/document/10179289)]
 - SoK: Pragmatic Assessment of Machine Learning for Network Intrusion Detection, `EuroS&P 2023` [[paper](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10190520)] [[code](https://github.com/hihey54/pragmaticAssessment)]
+- A Comprehensive Survey on Network Traffic Synthesis From Statistical Models to Deep Learning, `arxiv 2025` [[paper](http://arxiv.org/abs/2507.01976)]
 
 ### Network Traffic Classification
 #### Offline: Pre-trained Models
@@ -34,6 +35,7 @@ A curation of awesome papers, datasets and tools about network traffic analysis.
 - Yet Another Traffc Classifer: A Masked Autoencoder Based Traffc Transformer with Multi-Level Flow Representation, `AAAI 2023` [[paper](https://dl.acm.org/doi/10.1609/aaai.v37i4.25674)] [[code](https://github.com/NSSL-SJTU/YaTC)]
 - ET-BERT: A Contextualized Datagram Representation with Pre-training Transformers for Encrypted Traffic Classification, `WWW 2022` [[paper](https://dl.acm.org/doi/10.1145/3485447.3512217)][[code](https://github.com/linwhitehat/ET-BERT)]
 - PERT: Payload Encoding Representation from Transformer for Encrypted Traffic Classification, `ITU 2020` [[paper](https://ieeexplore.ieee.org/document/9303204)]
+- TrafficLLM: Enhancing Large Language Models for Network Traffic Analysis with Generic Traffic Representation, `arxiv 2025` [[paper](https://arxiv.org/pdf/2504.04222)] [[code](https://github.com/ZGC-LLM-Safety/TrafficLLM)]
 
 #### Offline: DL/ML
 - TFE-GNN: A Temporal Fusion Encoder Using Graph Neural Networks for Fine-grained Encrypted Trafic Classification, `WWW 2023` [[paper](https://dl.acm.org/doi/10.1145/3543507.3583227)] [[code](https://github.com/ViktorAxelsen/TFE-GNN)]
@@ -59,6 +61,14 @@ A curation of awesome papers, datasets and tools about network traffic analysis.
 - Datacenter Network Deserves Be!er Traffic Models, `Hotnets 2023` [[paper](https://conferences.sigcomm.org/hotnets/2023/papers/hotnets23_huang.pdf)]
 - Practical GAN-based synthetic IP header trace generation using NetShare, `SIGCOMM 2022` [[paper](https://dl.acm.org/doi/10.1145/3544216.3544251)] [[code](https://github.com/netsharecmu/NetShare)]
 - Locality Matters! Traffic Demand Modeling in Datacenter Networks, `APNET 2022` [[paper](https://conferences.sigcomm.org/events/apnet2022/papers/Locality%20Matters!%20Traffic%20Demand%20Modeling%20in%20Datacenter%20Networks.pdf)]
+- Using GANs for Sharing Networked Time Series Data: Challenges, Initial Promise, and Open Questions, `IMC 2020` [[paper](https://arxiv.org/pdf/1909.13403)] [[code](https://github.com/fjxmlzn/DoppelGANger)]
+- NetDiffus: Network Traffic Generation by Diffusion Models through Time-Series Imaging, `arxiv 2023` [[paper](https://arxiv.org/pdf/2310.04429)] [[code](https://github.com/Nirhoshan/NetDiffus?tab=readme-ov-file)]
+- PAC-GPT: A novel approach to generating synthetic network traffic with GPT-3, `arxiv 2023` [[paper](https://ieeexplore.ieee.org/document/10287342)] [[code](https://github.com/dark-0ne/NetworkPacketGenerator)]
+- NetGPT: Generative Pretrained Transformer for Network Traffic, `arxiv 2023` [[paper](https://arxiv.org/pdf/2304.09513)] [[code](https://github.com/ict-net/NetGPT)]
+- STAN: Synthetic Network Trafic Generation with Generative Neural Models, `arxiv 2021` [[paper](https://arxiv.org/pdf/2009.12740)] [[code](https://github.com/ShengzheXu/stan.git)]
+- Necstgen: An approach for realistic network traffic generation using deep learning, `GLOBECOM 2022` [[paper](https://ieeexplore.ieee.org/document/10000731)] [[code](https://github.com/fmeslet/NeCSTGen)]
+- DiffuPac: Contextual Mimicry in Adversarial Packets Generation via Diffusion Model, `NeurIPS 2024` [[paper](https://dl.acm.org/doi/10.5555/3737916.3742169)]
+- Synthetic and privacy-preserving traffic trace generation using generative ai models for training network intrusion detection systems, `elsevier 2024` [[paper](https://www.sciencedirect.com/science/article/pii/S1084804524001036)] [[code](https://codeberg.org/CiroGuida/GenAI-network-traffic)]
 
 ### Network Intrusion Detection
 #### Offline: DL/ML
