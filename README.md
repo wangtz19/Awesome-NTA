@@ -1,4 +1,5 @@
 <div align="center">
+<img src=".assets/awesome-nta-banner.png" alt="Awesome Network Traffic Analysis" width="100%">
 <h1>Awesome Network Traffic Analysis </h1>
 A curation of awesome papers, datasets and tools about network traffic analysis.
 </div>
