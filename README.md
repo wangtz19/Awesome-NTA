@@ -20,9 +20,11 @@ A curation of awesome papers, datasets and tools about network traffic analysis.
 - [APT Detection & Provenance Graph IDS](#apt-detection--provenance-graph-ids)
 - [Traffic Analysis under Distribution Shift](#traffic-analysis-under-distribution-shift)
 - [Datasets & Benchmarks](#datasets--benchmarks)
+- [License](#license)
 
 ## Papers
 ### Survey
+- A Comprehensive Survey on Network Traffic Synthesis From Statistical Models to Deep Learning, `arxiv 2025` [[paper](http://arxiv.org/abs/2507.01976)]
 - Introducing a Comprehensive, Continuous, and Collaborative Survey of Intrusion Detection Datasets, `CSET 2024` [[paper](https://doi.org/10.1145/3675741.3675754)]
 - A Survey of Public IoT Datasets for Network Security Research, `CST 2023` [[paper](https://doi.org/10.1109/COMST.2023.3288942)]
 - SoK: A Critical Evaluation of Efficient Website Fingerprinting Defenses, `S&P 2023` [[paper](https://doi.org/10.1109/SP46215.2023.10179289)]
@@ -44,7 +46,7 @@ A curation of awesome papers, datasets and tools about network traffic analysis.
 - TrafficGPT: Breaking the Token Barrier for Efficient Long Traffic Analysis and Generation, `arxiv 2024` [[paper](https://arxiv.org/pdf/2403.05822)] [[code](https://github.com/lijlansg/TrafficGPT)]
 - Flow-MAE: Leveraging Masked AutoEncoder for Accurate, Efficient and Robust Malicious Traffic Classification, `RAID 2023` [[paper](https://dl.acm.org/doi/10.1145/3607199.3607206)] [[code](https://github.com/NLear/Flow-MAE)]
 - Listen to Minority: Encrypted Traffic Classification for Class Imbalance with Contrastive Pre-Training, `SECON 2023` [[paper](https://doi.org/10.1109/SECON58729.2023.10287449)]
-- NetGPT: Generative Pretrained Transformer for Network Traffic, `arxiv 2023` [[paper](https://arxiv.org/abs/2304.09513)] [[code](https://github.com/ict-net/NetGPT)]
+- NetGPT: Generative Pretrained Transformer for Network Traffic, `arxiv 2023` [[paper](https://arxiv.org/pdf/2304.09513)] [[code](https://github.com/ict-net/NetGPT)]
 - Yet Another Traffic Classifier: A Masked Autoencoder Based Traffic Transformer with Multi-Level Flow Representation, `AAAI 2023` [[paper](https://dl.acm.org/doi/10.1609/aaai.v37i4.25674)] [[code](https://github.com/NSSL-SJTU/YaTC)]
 - ET-BERT: A Contextualized Datagram Representation with Pre-training Transformers for Encrypted Traffic Classification, `WWW 2022` [[paper](https://dl.acm.org/doi/10.1145/3485447.3512217)] [[code](https://github.com/linwhitehat/ET-BERT)]
 - Pert: Payload Encoding Representation from Transformer for Encrypted Traffic Classification, `ITU 2020` [[paper](https://ieeexplore.ieee.org/document/9303204)]
@@ -57,7 +59,6 @@ A curation of awesome papers, datasets and tools about network traffic analysis.
 - Miett: Multi-Instance Encrypted Traffic Transformer for Encrypted Traffic Classification, `AAAI 2025` [[paper](https://doi.org/10.1609/aaai.v39i15.33748)]
 - Multi-view Correlation-aware Network Traffic Detection on Flow Hypergraph, `arxiv 2025` [[paper](https://arxiv.org/abs/2501.08610)]
 - One task to rule them all: A closer look at traffic classification generalizability, `arxiv 2025` [[paper](https://arxiv.org/abs/2507.06430)]
-- Reliable Open-Set Network Traffic Classification, `TIFS 2025` [[paper](https://doi.org/10.1109/TIFS.2025.3544067)]
 - Revolutionizing Encrypted Traffic Classification with MH-Net: A Multi-View Heterogeneous Graph Model, `AAAI 2025` [[paper](https://doi.org/10.1609/aaai.v39i1.32091)]
 - SoK: Decoding the Enigma of Encrypted Network Traffic Classifiers, `S&P 2025` [[paper](https://doi.org/10.1109/SP61157.2025.00165)]
 - The Sweet Danger of Sugar: Debunking Representation Learning for Encrypted Traffic Classification, `sigcomm 2025` [[paper](https://doi.org/10.1145/3718958.3750498)]
@@ -67,14 +68,12 @@ A curation of awesome papers, datasets and tools about network traffic analysis.
 - Identifying VPN Servers through Graph-Represented Behaviors, `WWW 2024` [[paper](https://doi.org/10.1145/3589334.3645552)]
 - Mpaf: Encrypted Traffic Classification With Multi-Phase Attribute Fingerprint, `TIFS 2024` [[paper](https://doi.org/10.1109/TIFS.2024.3428839)]
 - ServeFlow: A Fast-Slow Model Architecture for Network Traffic Analysis, `arxiv 2024` [[paper](https://arxiv.org/abs/2402.03694)]
-- TrafficLLM: LLMs for improved open-set encrypted traffic analysis, `arxiv 2024` [[paper](https://doi.org/10.1016/j.comnet.2025.111847)] [[code](https://github.com/ZGC-LLM-Safety/TrafficLLM)]
 - Understanding Web Fingerprinting with a Protocol-Centric Approach, `RAID 2024` [[paper](https://doi.org/10.1145/3678890.3678910)]
 - Classify Traffic Rather Than Flow: Versatile Multi-Flow Encrypted Traffic Classification With Flow Clustering, `TNSM 2023` [[paper](https://doi.org/10.1109/TNSM.2023.3322861)]
 - GGFAST: Automating Generation of Flexible Network Traffic Classifiers, `Sigcomm 2023` [[paper](https://doi.org/10.1145/3603269.3604840)]
 - ProGraph: Robust Network Traffic Identification With Graph Propagation, `ToN 2023` [[paper](https://ieeexplore.ieee.org/document/9933044)]
 - Replication: Contrastive Learning and Data Augmentation in Traffic Classification Using a Flowpic Input Representation, `IMC 2023` [[paper](https://doi.org/10.1145/3618257.3624820)]
 - Revolutionizing Cyber Threat Detection with Large Language Models, `arxiv 2023` [[paper](https://arxiv.org/abs/2306.14263)]
-- Rosetta: Enabling Robust TLS Encrypted Traffic Classification in Diverse Network Environments with TCP-Aware Traffic Augmentation, `Security 2023` [[paper](https://doi.org/10.1145/3603165.3607437)]
 - TFE-GNN: A Temporal Fusion Encoder Using Graph Neural Networks for Fine-grained Encrypted Traffic Classification, `WWW 2023` [[paper](https://dl.acm.org/doi/10.1145/3543507.3583227)] [[code](https://github.com/ViktorAxelsen/TFE-GNN)]
 - A few shots traffic classification with mini-FlowPic augmentations, `IMC 2022` [[paper](https://doi.org/10.1145/3517745.3561436)] [[code](https://github.com/eyalho/mini-flowpic-traffic-classification)]
 - MT-FlowFormer: A Semi-Supervised Flow Transformer for Encrypted Traffic Classification, `KDD 2022` [[paper](https://dl.acm.org/doi/10.1145/3534678.3539314)]
@@ -100,20 +99,26 @@ A curation of awesome papers, datasets and tools about network traffic analysis.
 - Leo: Online ML-based Traffic Classification at Multi-Terabit Line Rate, `NSDI 2024` [[paper](https://www.usenix.org/conference/nsdi24/presentation/jafri)] [[code](https://github.com/Purdue-ISL/Leo)]
 - Recursive Multi-Tree Construction With Efficient Rule Sifting for Packet Classification on FPGA, `ToN 2024` [[paper](https://ieeexplore.ieee.org/document/10315073)] [[code](https://github.com/wenjunpaper/KickTree)]
 ### Network Traffic Generation
+- DiffuPac: Contextual Mimicry in Adversarial Packets Generation via Diffusion Model, `NeurIPS 2024` [[paper](https://dl.acm.org/doi/10.5555/3737916.3742169)]
 - Diffusion Model-based Mobile Traffic Generation with Open Data for Network Planning and Optimization, `KDD 2024` [[paper](https://doi.org/10.1145/3637528.3671544)]
 - Feasibility of State Space Models for Network Traffic Generation, `NAIC 2024` [[paper](https://doi.org/10.1145/3672198.3673792)]
 - NetDiff: A Service-Guided Hierarchical Diffusion Model for Network Flow Trace Generation, `CoNext3 2024` [[paper](https://doi.org/10.1145/3676870)]
+- Synthetic and privacy-preserving traffic trace generation using generative ai models for training network intrusion detection systems, `elsevier 2024` [[paper](https://www.sciencedirect.com/science/article/pii/S1084804524001036)] [[code](https://codeberg.org/CiroGuida/GenAI-network-traffic)]
 - Datacenter Network Deserves Better Traffic Models, `Hotnets 2023` [[paper](https://conferences.sigcomm.org/hotnets/2023/papers/hotnets23_huang.pdf)]
+- NetDiffus: Network Traffic Generation by Diffusion Models through Time-Series Imaging, `arxiv 2023` [[paper](https://arxiv.org/pdf/2310.04429)] [[code](https://github.com/Nirhoshan/NetDiffus?tab=readme-ov-file)]
 - NetDiffusion: Network Data Augmentation Through Protocol-Constrained Traffic Generation, `SIGMETRICS 2023` [[paper](https://dl.acm.org/doi/10.1145/3639037)] [[code](https://github.com/noise-lab/NetDiffusion_Generator)]
+- PAC-GPT: A novel approach to generating synthetic network traffic with GPT-3, `arxiv 2023` [[paper](https://ieeexplore.ieee.org/document/10287342)] [[code](https://github.com/dark-0ne/NetworkPacketGenerator)]
 - Locality Matters! Traffic Demand Modeling in Datacenter Networks, `APNET 2022` [[paper](https://conferences.sigcomm.org/events/apnet2022/papers/Locality%20Matters!%20Traffic%20Demand%20Modeling%20in%20Datacenter%20Networks.pdf)]
+- Necstgen: An approach for realistic network traffic generation using deep learning, `GLOBECOM 2022` [[paper](https://ieeexplore.ieee.org/document/10000731)] [[code](https://github.com/fmeslet/NeCSTGen)]
 - Practical GAN-based synthetic IP header trace generation using NetShare, `SIGCOMM 2022` [[paper](https://dl.acm.org/doi/10.1145/3544216.3544251)] [[code](https://github.com/netsharecmu/NetShare)]
+- Stan: Synthetic Network Trafic Generation with Generative Neural Models, `arxiv 2021` [[paper](https://arxiv.org/pdf/2009.12740)] [[code](https://github.com/ShengzheXu/stan.git)]
+- Using GANs for Sharing Networked Time Series Data: Challenges, Initial Promise, and Open Questions, `IMC 2020` [[paper](https://arxiv.org/pdf/1909.13403)] [[code](https://github.com/fjxmlzn/DoppelGANger)]
 ### Network Intrusion Detection
 #### Offline: DL/ML
 - MalMoE: Mixture-of-Experts Enhanced Encrypted Malicious Traffic Detection Under Graph Drift, `arxiv 2026`
 - Continual Learning with Strategic Selection and Forgetting for Network Intrusion Detection, `arxiv 2025` [[paper](https://doi.org/10.1109/infocom55648.2025.11044615)]
 - Generative Active Adaptation for Drifting and Imbalanced Network Intrusion Detection, `arxiv 2025`
 - Hierarchical Local-Global Feature Learning for Few-shot Malicious Traffic Detection, `arxiv 2025`
-- Multi-view Correlation-aware Network Traffic Detection on Flow Hypergraph, `arxiv 2025` [[paper](https://arxiv.org/abs/2501.08610)]
 - Self-Supervised Learning of Graph Representations for Network Intrusion Detection, `arxiv 2025`
 - $\mathsf{TCG}\text{-}\mathsf{IDS}$ : Robust Network Intrusion Detection via Temporal Contrastive Graph Learning, `TIFS 2025` [[paper](https://doi.org/10.1109/tifs.2025.3530702)]
 - ContraMTD: An Unsupervised Malicious Network Traffic Detection Method based on Contrastive Learning, `WWW 2024` [[paper](https://dl.acm.org/doi/10.1145/3589334.3645479)]
@@ -121,7 +126,6 @@ A curation of awesome papers, datasets and tools about network traffic analysis.
 - Detecting Tunneled Flooding Traffic via Deep Semantic Analysis of Packet Length Patterns, `CCS 2024` [[paper](https://doi.org/10.1145/3658644.3670353)]
 - Device Identification and Anomaly Detection in IoT Environments, `IOT 2024` [[paper](https://doi.org/10.1109/JIOT.2024.3522863)]
 - Divide, Conquer, and Coalesce: Meta Parallel Graph Neural Network for IoT Intrusion Detection at Scale, `WWW 2024` [[paper](https://doi.org/10.1145/3589334.3645457)]
-- ECNet: Robust Malicious Network Traffic Detection With Multi-View Feature and Confidence Mechanism, `TIFS 2024` [[paper](https://ieeexplore.ieee.org/document/10592040)]
 - Enhanced Few-Shot Malware Traffic Classification via Integrating Knowledge Transfer With Neural Architecture Search, `TIFS 2024` [[paper](https://doi.org/10.1109/TIFS.2024.3396624)]
 - Foss: Towards Fine-Grained Unknown Class Detection Against the Open-Set Attack Spectrum With Variable Legitimate Traffic, `ToN 2024` [[paper](https://ieeexplore.ieee.org/document/10638516)]
 - K-GetNID: Knowledge-Guided Graphs for Early and Transferable Network Intrusion Detection, `TIFS 2024` [[paper](https://ieeexplore.ieee.org/document/10605850)]
@@ -134,7 +138,6 @@ A curation of awesome papers, datasets and tools about network traffic analysis.
 - TMG-GAN: Generative Adversarial Networks-Based Imbalanced Learning for Network Intrusion Detection, `TIFS 2024` [[paper](https://ieeexplore.ieee.org/document/10312801)]
 - TrafCL: Robust Encrypted Malicious Traffic Detection via Contrastive Learning, `CIKM 2024` [[paper](https://doi.org/10.1145/3627673.3679839)]
 - Trident: A Universal Framework for Fine-Grained and Class-Incremental Unknown Traffic Detection, `WWW 2024` [[paper](https://dl.acm.org/doi/10.1145/3589334.3645407)] [[code](https://github.com/Secbrain/Trident/)]
-- Understanding and Bridging the Gap Between Unsupervised Network Representation Learning and Security Analytics, `S&P 2024` [[paper](https://doi.org/10.1109/sp54263.2024.00012)]
 - 3D-IDS: Doubly Disentangled Dynamic Intrusion Detection, `KDD 2023` [[paper](https://doi.org/10.1145/3580305.3599238)]
 - Application of a Dynamic Line Graph Neural Network for Intrusion Detection With Semisupervised Learning, `TIFS 2023` [[paper](https://doi.org/10.1109/tifs.2022.3228493)]
 - CPS-GUARD: Intrusion detection for cyber-physical systems and IoT devices using outlier-aware deep autoencoders, `CS 2023` [[paper](https://doi.org/10.1016/j.cose.2023.103210)]
@@ -170,7 +173,7 @@ A curation of awesome papers, datasets and tools about network traffic analysis.
 - HorusEye: A Realtime IoT Malicious Traffic Detection Framework using Programmable Switches, `Security 2023` [[paper](https://www.usenix.org/conference/usenixsecurity23/presentation/dong-yutao)] [[code](https://github.com/vicTorKd/HorusEye)]
 - Real-Time Malicious Traffic Detection With Online Isolation Forest Over SD-WAN, `TIFS 2023` [[paper](https://doi.org/10.1109/tifs.2023.3262121)]
 - Realtime Robust Malicious Traffic Detection via Frequency Domain Analysis, `CCS 2021` [[paper](https://doi.org/10.1145/3460120.3484585)]
-- Kitsune: An Ensemble of Autoencoders for Online Network Intrusion Detection, `NDSS 2018` [[paper](https://www.ndss-symposium.org/wp-content/uploads/2018/02/ndss2018_03A-3_Mirsky_paper.pdf)] [[code](https://github.com/ymirsky/KitNET-py)]
+- Kitsune: An Ensemble of Autoencoders for Online Network Intrusion Detection, `NDSS 2018` [[paper](https://www.ndss-symposium.org/wp-content/uploads/2018/02/ndss2018_03A-3_Mirsky_paper.pdf)] [[code](https://github.com/ymirsky/Kitsune-py)]
 ### Robustness
 - AN-Net: an Anti-Noise Network for Anonymous Traffic Classification, `WWW 2024` [[paper](https://doi.org/10.1145/3589334.3645691)]
 - Cactus: Obfuscating Bidirectional Encrypted TCP Traffic at Client Side, `TIFS 2024` [[paper](https://doi.org/10.1109/TIFS.2024.3442530)]
@@ -185,7 +188,7 @@ A curation of awesome papers, datasets and tools about network traffic analysis.
 - CADE: Detecting and Explaining Concept Drift Samples for Security Applications, `Security 2021` [[paper](https://www.usenix.org/conference/usenixsecurity21/presentation/yang-limin)] [[code](https://github.com/whyisyoung/CADE)]
 - Fare: Enabling Fine-grained Attack Categorization under Low-quality Labeled Data, `NDSS 2021` [[paper](https://www.ndss-symposium.org/ndss-paper/fare-enabling-fine-grained-attack-categorization-under-low-quality-labeled-data/)]
 ### Explainability
-- Building Transparency in Deep Learning-Powered Network Traffic Classification: A Traffic-Explainer Framework, `KDD 2026` [[paper](https://doi.org/10.1145/3770854.3783939)]
+- Building Transparency in Deep Learning-Powered Network Traffic Classification: A Traffic-Explainer Framework, `arxiv 2025` [[paper](https://doi.org/10.1145/3770854.3783939)]
 - Genos: General In-Network Unsupervised Intrusion Detection by Rule Extraction, `Infocom 2024` [[paper](https://arxiv.org/abs/2403.19248)]
 - IDS-Agent: An LLM Agent for Explainable Intrusion Detection in IoT Networks, `NeurIPS Workshop 2024`
 - Rules Refine the Riddle: Global Explanation for Deep Learning-Based Anomaly Detection in Security Applications, `CCS 2024` [[paper](https://doi.org/10.1145/3658644.3670375)]
@@ -249,7 +252,6 @@ A curation of awesome papers, datasets and tools about network traffic analysis.
 - Exploring QUIC Dynamics: A Large-Scale Dataset for Encrypted Traffic Analysis, `arxiv 2025` [[paper](https://doi.org/10.1109/MeditCom64437.2025.11104435)]
 - A Large-Scale Mobile Traffic Dataset For Mobile Application Identification, `computer journal 2024` [[paper](https://doi.org/10.1093/comjnl/bxad076)]
 - Bad Design Smells in Benchmark NIDS Datasets, `EuroS&P 2024` [[paper](https://doi.org/10.1109/EuroSP60621.2024.00042)]
-- Extensible Machine Learning for Encrypted Network Traffic Application Labeling via Uncertainty Quantification, `TAI 2023` [[paper](https://doi.org/10.1109/TAI.2023.3244168)]
 - Evaluating Standard Feature Sets Towards Increased Generalisability and Explainability of ML-Based Network Intrusion Detection, `ToN-IoT:BoT-IoT 2022` [[paper](https://doi.org/10.1016/j.bdr.2022.100359)]
 - ToN_IoT: The Role of Heterogeneity and the Need for Standardization of Features and Attack Types in IoT Network Intrusion Data Sets, `IOT 2022` [[paper](https://doi.org/10.1109/JIOT.2021.3085194)]
 - A Detailed Analysis of the CICIDS2017 Benchmark Dataset for Intrusion Detection, `2021`
@@ -258,3 +260,8 @@ A curation of awesome papers, datasets and tools about network traffic analysis.
 - Toward Generating a New Intrusion Detection Dataset and Intrusion Traffic Characterization, `CICIDS 2018` [[paper](https://doi.org/10.5220/0006639801080116)]
 - Characterization of Tor Traffic using Time based Features, `ISCXTor2016 2017` [[paper](https://doi.org/10.5220/0006105602530262)]
 - Characterization of Encrypted and VPN Traffic using Time-related Features, `ISCXVPN2016 2016` [[paper](https://doi.org/10.5220/0005740704070414)]
+
+## License
+[![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
+
+To the extent possible under law, the maintainers have waived all copyright and related rights to this work under [CC0 1.0 Universal](./LICENSE). The list itself is a curation of publicly available paper metadata; copyright on the underlying papers and code repositories belongs to their respective authors.
