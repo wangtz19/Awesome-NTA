@@ -1,4 +1,5 @@
 *.pdf
+*.csv
 scripts/
 .DS_Store
 .claude
