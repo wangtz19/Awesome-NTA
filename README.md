@@ -4,16 +4,6 @@ A curation of awesome papers, datasets and tools about network traffic analysis.
 </div>
 
 ## Table of Contents
-- [Datasets](#datasets)
-    - [Encrypted Traffic & Anonymity](#encrypted-traffic--anonymity)
-    - [Intrusion Detection & Attacks](#intrusion-detection--attacks)
-        - [DDoS](#ddos)
-        - [DNS / DoH Tunneling](#dns--doh-tunneling)
-        - [Botnet](#botnet)
-        - [IDS / IoT](#ids--iot)
-    - [Application & Mobile-App Identification](#application--mobile-app-identification)
-    - [Concept Drift](#concept-drift)
-    - [Malware Traffic](#malware-traffic)
 - [Papers](#papers)
     - [Survey](#survey)
     - [Network Traffic Classification](#network-traffic-classification)
@@ -31,76 +21,23 @@ A curation of awesome papers, datasets and tools about network traffic analysis.
     - [APT Detection & Provenance Graph IDS](#apt-detection--provenance-graph-ids)
     - [Traffic Analysis under Distribution Shift](#traffic-analysis-under-distribution-shift)
     - [Datasets & Benchmarks](#datasets--benchmarks)
+- [Datasets](#datasets)
+    - [Encrypted Traffic & Anonymity](#encrypted-traffic--anonymity)
+    - [Intrusion Detection & Attacks](#intrusion-detection--attacks)
+        - [DDoS](#ddos)
+        - [DNS / DoH Tunneling](#dns--doh-tunneling)
+        - [Botnet](#botnet)
+        - [IDS / IoT](#ids--iot)
+    - [Application & Mobile-App Identification](#application--mobile-app-identification)
+    - [Concept Drift](#concept-drift)
+    - [Malware Traffic](#malware-traffic)
+- [Tools](#tools)
+    - [Packet Parsing](#packet-parsing)
+    - [Packet Splitting / Editing](#packet-splitting--editing)
+    - [Flow Feature Extraction](#flow-feature-extraction)
+    - [Traffic Replay / Generation](#traffic-replay--generation)
+    - [Anonymization](#anonymization)
 - [License](#license)
-
-## Datasets
-### Encrypted Traffic & Anonymity
-| Dataset | Year | Description | Classes | Format | Size | Link |
-|---|---|---|---|---|---|---|
-| **Darknet 2020** (CICDarknet2020) | 2020 | Detection and characterisation of darknet (Tor + VPN) traffic, supporting early malware monitoring and post-outbreak analysis. | 8 | CSV | — | [link](https://github.com/Marzoug-Nabil/CIC-darknet2020) |
-| **Tor-nonTor dataset** (ISCXTor2016) | 2016 | Tor vs non-Tor traffic classification using time-based flow features extracted with ISCXFlowMeter. | 7 (browsing, email, chat, audio, video, FTP, VoIP) | pcap CSV | 22 GB | [link](https://www.unb.ca/cic/datasets/tor.html) |
-| **VPN-nonVPN traffic dataset** (ISCXVPN2016) | 2016 | VPN vs non-VPN traffic classification using time-related flow features. | 14 (VoIP, VPN-VoIP, P2P, VPN-P2P, …) | pcap CSV | 28 GB | [link](https://www.unb.ca/cic/datasets/vpn.html) |
-| **AppSniffer mobile-app dataset (×4)** | — | Four labelled mobile-app traffic captures released with AppSniffer (WWW '23). | — | — | — | [link](https://github.com/network-traffic/AppSniffer) |
-### Intrusion Detection & Attacks
-#### DDoS
-| Dataset | Year | Description | Classes | Format | Size | Link |
-|---|---|---|---|---|---|---|
-| **Realistic IDS — DoS and spoofing attack in IoV** (CICIoV2024) | 2024 | Realistic IDS evaluation for in-vehicle (IoV) CAN-bus DoS and spoofing attacks captured on a 2019 Ford vehicle. | 2 (DoS, spoofing) | CSV | 6.3 MB | [link](https://www.unb.ca/cic/datasets/iov-dataset-2024.html) |
-| **CICEV2023 / CICDataset_Organized** (CICEV2023 & CICDataset_Organized) | 2023 | Detection of DDoS attacks against electric-vehicle (EV) charging infrastructure under four simulated attack scenarios. | 4 attack scenarios | json | — | [link](https://www.unb.ca/cic/datasets/cicev2023.html) |
-| **DDoS evaluation dataset** (CIC-DDoS2019) | 2019 | Benchmark for distributed denial-of-service attack detection algorithms. | 13 | pcap CSV | multi | [link](https://www.unb.ca/cic/datasets/ddos-2019.html) |
-| **CIC UNSW-NB15 Augmented Dataset** (CIC-UNSW-NB15) | — | Augmented UNSW-NB15 derivative with new CICFlowMeter features for adversarial NIDS evaluation. | 10 (9 attack types + benign) | CSV | 1.8 GB | [link](https://www.unb.ca/cic/datasets/cic-unsw-nb15.html) |
-#### DNS / DoH Tunneling
-| Dataset | Year | Description | Classes | Format | Size | Link |
-|---|---|---|---|---|---|---|
-| **CIC Bell DNS EXF 2021** (CICBellEXFDNS2021) | 2021 | Low-rate covert data exfiltration over DNS tunnels. | 3 (heavy attack, light attack, benign) | pcap CSV | 270.8 MB | [link](https://www.unb.ca/cic/datasets/dns-exf-2021.html) |
-| **DNS over HTTPS** (CIRA-CIC-DoHBrw2020) | 2020 | Encrypted DNS-over-HTTPS traffic for covert-channel and tunnel detection. | 3 (benign DoH, malicious DoH, non-DoH) | pcap CSV | — | [link](https://www.unb.ca/cic/datasets/dohbrw-2020.html) |
-| **CIC Bell DNS 2021** (CICBellDNS2021) | — | Malicious-domain detection using lexical, DNS-statistical, and third-party features. | 4 (benign, spam, phishing, malware) | CSV | 400K benign / 13,011 malicious samples | [link](https://www.unb.ca/cic/datasets/dns-2021.html) |
-#### Botnet
-| Dataset | Year | Description | Classes | Format | Size | Link |
-|---|---|---|---|---|---|---|
-| **ISCX botnet dataset 2014** (ISCX-Bot-2014) | 2014 | Composite botnet detection benchmark mixing benign traffic with multiple botnet families. | 7 (train) / 16 (test) | archive | 5.3 GB train / 8.5 GB test | [link](https://www.unb.ca/cic/datasets/botnet.html) |
-#### IDS / IoT
-| Dataset | Year | Description | Classes | Format | Size | Link |
-|---|---|---|---|---|---|---|
-| **Attack vectors in healthcare** (CICIoMT 2024) | 2024 | Security evaluation for Internet-of-Medical-Things devices over Wi-Fi/MQTT and Bluetooth Low Energy. | 5 (DDoS, DoS, Recon, MQTT, spoofing) | pcap CSV | 10 GB | [link](https://www.unb.ca/cic/datasets/iomt-dataset-2024.html) |
-| **CIC EV charger attack dataset 2024** (CICEVSE2024) | 2024 | EV-charging-station security: behavioural analysis and binary/multi-class anomaly detection from ~900 hardware performance counters. | multi | CSV | 2.6 GB | [link](https://www.unb.ca/cic/datasets/evse-dataset-2024.html) |
-| **A real-time IoT attack benchmark** (CICIoT 2023) | 2023 | Large-scale IoT attack benchmark with 33 attacks across 105 IoT devices. | 7 (DDoS, DoS, Recon, Web, Brute Force, Spoofing, Mirai) | pcap CSV | multi | [link](https://www.unb.ca/cic/datasets/iotdataset-2023.html) |
-| **iCloud Private Relay traffic-analysis dataset** | 2023 · UMass | Website-fingerprinting and traffic-correlation experiments against Apple iCloud Private Relay (UMass, ASIACCS '23). | n/a | pcap CSV | 1.8 GB | [link](https://skulddata.cs.umass.edu/traces/network/ipr_asiaccs23.tar.xz) |
-| **IoT profiling dataset** (CICIoT 2022) | 2022 | IoT device profiling, behavioural analysis and identification across Power/Idle/Interactive/Scenario/Active/Attack regimes. | 3 device classes (Audio, Camera, Home Automation) | pcap CSV | <5 GB | [link](https://www.unb.ca/cic/datasets/iotdataset-2022.html) |
-| **IPS/IDS dataset on AWS** (CSE-CIC-IDS2018) | 2018 | Network-based anomaly IDS evaluation on AWS-hosted infrastructure. | 7 attack classes (Brute Force, Heartbleed, Botnet, DoS, DDoS, Web, Infiltration) | CSV | — | [link](https://www.unb.ca/cic/datasets/ids-2018.html) |
-| **Intrusion detection evaluation dataset** (CIC-IDS2017) | 2017 | IDS/IPS evaluation benchmark with diverse attack scenarios. | 8 (FTP/SSH brute force, DoS, Heartbleed, Web, Infiltration, Botnet, DDoS) | pcap CSV | ~51.1 GB | [link](https://www.unb.ca/cic/datasets/ids-2017.html) |
-| **CSIC 2010** | 2010 | HTTP web-attack detection benchmark. | — | — | — | [link](https://drive.google.com/drive/folders/1CDjUmDqUid6vZvMuPQxWLTGXpMT2DfZy) |
-| **Enriching IoT datasets** (Enriched_IOT_Datasets) | — | Horizontally and vertically enriched combinations of Bot-IoT and TON-IoT for security analytics. | multi | CSV | — | [link](https://www.unb.ca/cic/datasets/enricheddataset.html) |
-### Application & Mobile-App Identification
-| Dataset | Year | Description | Classes | Format | Size | Link |
-|---|---|---|---|---|---|---|
-| **CSTNET 2023** | 2023 · CAS / CSTNET | Anonymised institutional Internet traffic from CSTNET (CAS). | — | json | — | [link](https://drive.google.com/drive/folders/1BUo5TMRuXNvTqNYy0RLeHk4l4Q3BuzSk) |
-| **CW-100 2018** | 2023 | Encrypted mobile-app classification benchmark (100 apps). | — | json | — | [link](https://drive.google.com/drive/folders/15_bn19jej17RY1hpzovqVgABiZnLrJ0e) |
-| **NUDT MobileTraffic Dataset** | 2023 · Network Forensics Research Lab | Anonymised mobile-app traffic with three label levels: 22 categories, 350 apps, 9 brands × 94 phone models. | 22 traffic categories / 350 apps / 9 brands / 94 models | pcap CSV | 293 GB | [link](https://github.com/Abby-ZS/NUDT_MobileTraffic) |
-| **Application Based Network Traffic Dataset** | 2021 | Packet captures of 22 commonly used desktop applications (Kaggle). | 22 applications | PCAP | 6.96 GB | [link](https://www.kaggle.com/datasets/applicationdataset/applicationbasednetworktrafficdataset) |
-| **CrossNet2021** | 2021 | Cross-network mobile-app classification benchmark used by ProGraph. | — | — | — | [link](https://github.com/SecTeamPolaris/ProGraph) |
-| **MaMPF** | 2018 · Chang Liu; Zigang Cao; Gang Xiong; Gaopeng Gou; Siu-Ming Yiu; Longtao He | Encrypted-traffic classification using multi-attribute Markov probability fingerprints over length-block sequences. | — | — | 950,000+ encrypted flows | [link](https://github.com/WSPTTH/MaMPF) |
-| **Cross-Platform iOS/Android Apps (Northeastern Recon)** | 2017 · The Northeastern University | Cross-country (China / India / US) mobile-app traffic captured on Nexus 5 (Android 6) and iPhone 5 / 5s (iOS 10). | — | pcap | — | [link](https://recon.meddle.mobi/cross-market.html) |
-| **International Privacy Risks of Mobile Apps** | 2017 · Jingjing Ren, Daniel J. Dubois, David Choffnes | Manual five-minute interaction traces for the top 100 iOS and Android apps to study cross-app privacy leakage. | — | pcap | 8 GB | [link](https://recon.meddle.mobi/cross-market.html) |
-| **ANDRUBIS** | 2016 · Martina Lindorfer, Matthias Neugschwandtner, Lukas Weichselbaum, Yanick Fratantonio, Victor van der Veen, Christian Platzer | Static + dynamic analysis traces for over 1M Android apps (~40 % malicious). | — | CSV pcap | 1,000,000+ Android apps | [link](https://drive.google.com/drive/folders/1IXa3IJS9zJS4vggpyU7yda8f7jZjz4gB) |
-| **USTC TFC 2016** | 2016 · USTC | Encrypted-traffic classification benchmark from USTC. | — | pcap | — | [link](https://drive.google.com/drive/folders/15zB0b4uS5OL5-xLc_uajb_XVLuvwO4ab) |
-| **UNIBS-2009** | 2009 · U. Brescia | Edge-router traffic from a U. Brescia campus network covering 20 workstations. | multi | by request | 27 GB raw / 2.7 GB anonymised + payload-stripped | [link](http://netweb.ing.unibs.it/ntw/) |
-| **Moore & Zuev hand-labelled flows** | 2005 · Andrew W. Moore, Denis Zuev (Queen Mary, University of London) | Hand-labelled flow dataset (10 application classes) accompanying Moore & Zuev's SIGMETRICS '05 paper, in WEKA format. | — | paid | 5–17 MB (gzip) | [link](https://www.eecs.qmul.ac.uk/~andrewsm/papers/rr-05-13.pdf) |
-| **MAWI Working Group Traffic Archive** | 1999-2024 · WIDE Project | Long-running (1999–) backbone Internet trace archive captured via tcpdump on the WIDE backbone, with anonymised IPs. | — | pcap | — | [link](http://www.wide.ad.jp/) |
-| **MAWILab** | daily-updated · WIDE Project | Daily-updated network anomaly labels derived from MAWI traces by combining multiple independent detectors with a graph-based scheme. | — | web view + CSV | — | [link](http://www.fukuda-lab.org/mawilab/) |
-### Concept Drift
-| Dataset | Year | Description | Classes | Format | Size | Link |
-|---|---|---|---|---|---|---|
-| **APP-53 2023** | 2023 | Mobile-app traffic with 53 classes for concept-drift evaluation. | — | — | — | [link](https://drive.google.com/drive/folders/1ClmdDmbb8RcxtOvZRhJuWtRtnkyNQgzp) |
-### Malware Traffic
-| Dataset | Year | Description | Classes | Format | Size | Link |
-|---|---|---|---|---|---|---|
-| **Evasive PDF Mal 2022** (Evasive-PDFMal2022) | 2022 | Evasive malicious-PDF detection benchmark; evasive samples are filtered via K-means over 32 features. | multi | archive | 1.2 GB | [link](https://www.unb.ca/cic/datasets/pdfmal-2022.html) |
-| **Malware Memory Analysis** (CIC MalMem 2022) | 2022 | Memory-dump benchmark for detecting obfuscated malware. | multi | CSV | 358 MB | [link](https://www.unb.ca/cic/datasets/malmem-2022.html) |
-| **Android Malware** (CIC MalDroid 2020) | 2020 | Five-class Android malware benchmark (Adware, Banking, SMS, Riskware, Benign) with semi-supervised baselines. | 5 (Adware, Banking, SMS, Riskware, Benign) | APK files Capturing-logs CSV files: | 111 GB+ | [link](https://www.unb.ca/cic/datasets/maldroid-2020.html) |
-| **CCCS-CIC-AndMal2020 (Android Malware 2020)** | 2020 | Android malware benchmark co-developed with the Canadian Centre for Cyber Security; 200 K malicious + 200 K benign apps. | 14 categories / 191 malware families | CSV | 400 K apps | [link](https://www.unb.ca/cic/datasets/andmal2020.html) |
-| **Android Adware and General Malware Dataset** (CIC-AAGM2017) | 2017 | Android adware and general-malware network traffic captured on real devices. | 3 (Adware, General Malware, Benign) | pcap CSV | 9.1 GB | [link](https://www.unb.ca/cic/datasets/android-adware.html) |
-| **Android Malware Dataset** (CIC-AndMal2017) | 2017 | Android malware traffic captured on real smartphones to evade emulator detection. | 4 (Adware, Ransomware, Scareware, SMS) | pcap | — | [link](https://www.unb.ca/cic/datasets/andmal2017.html) |
 
 ## Papers
 ### Survey
@@ -340,6 +277,118 @@ A curation of awesome papers, datasets and tools about network traffic analysis.
 - Toward Generating a New Intrusion Detection Dataset and Intrusion Traffic Characterization, `CICIDS 2018` [[paper](https://doi.org/10.5220/0006639801080116)]
 - Characterization of Tor Traffic using Time based Features, `ISCXTor2016 2017` [[paper](https://doi.org/10.5220/0006105602530262)]
 - Characterization of Encrypted and VPN Traffic using Time-related Features, `ISCXVPN2016 2016` [[paper](https://doi.org/10.5220/0005740704070414)]
+
+## Datasets
+### Encrypted Traffic & Anonymity
+| Dataset | Year | Description | Classes | Format | Size | Link |
+|---|---|---|---|---|---|---|
+| **Darknet 2020** (CICDarknet2020) | 2020 | Detection and characterisation of darknet (Tor + VPN) traffic, supporting early malware monitoring and post-outbreak analysis. | 8 | CSV | — | [link](https://github.com/Marzoug-Nabil/CIC-darknet2020) |
+| **Tor-nonTor dataset** (ISCXTor2016) | 2016 | Tor vs non-Tor traffic classification using time-based flow features extracted with ISCXFlowMeter. | 7 (browsing, email, chat, audio, video, FTP, VoIP) | pcap CSV | 22 GB | [link](https://www.unb.ca/cic/datasets/tor.html) |
+| **VPN-nonVPN traffic dataset** (ISCXVPN2016) | 2016 | VPN vs non-VPN traffic classification using time-related flow features. | 14 (VoIP, VPN-VoIP, P2P, VPN-P2P, …) | pcap CSV | 28 GB | [link](https://www.unb.ca/cic/datasets/vpn.html) |
+| **AppSniffer mobile-app dataset (×4)** | — | Four labelled mobile-app traffic captures released with AppSniffer (WWW '23). | — | — | — | [link](https://github.com/network-traffic/AppSniffer) |
+### Intrusion Detection & Attacks
+#### DDoS
+| Dataset | Year | Description | Classes | Format | Size | Link |
+|---|---|---|---|---|---|---|
+| **Realistic IDS — DoS and spoofing attack in IoV** (CICIoV2024) | 2024 | Realistic IDS evaluation for in-vehicle (IoV) CAN-bus DoS and spoofing attacks captured on a 2019 Ford vehicle. | 2 (DoS, spoofing) | CSV | 6.3 MB | [link](https://www.unb.ca/cic/datasets/iov-dataset-2024.html) |
+| **CICEV2023 / CICDataset_Organized** (CICEV2023 & CICDataset_Organized) | 2023 | Detection of DDoS attacks against electric-vehicle (EV) charging infrastructure under four simulated attack scenarios. | 4 attack scenarios | json | — | [link](https://www.unb.ca/cic/datasets/cicev2023.html) |
+| **DDoS evaluation dataset** (CIC-DDoS2019) | 2019 | Benchmark for distributed denial-of-service attack detection algorithms. | 13 | pcap CSV | multi | [link](https://www.unb.ca/cic/datasets/ddos-2019.html) |
+| **CIC UNSW-NB15 Augmented Dataset** (CIC-UNSW-NB15) | — | Augmented UNSW-NB15 derivative with new CICFlowMeter features for adversarial NIDS evaluation. | 10 (9 attack types + benign) | CSV | 1.8 GB | [link](https://www.unb.ca/cic/datasets/cic-unsw-nb15.html) |
+#### DNS / DoH Tunneling
+| Dataset | Year | Description | Classes | Format | Size | Link |
+|---|---|---|---|---|---|---|
+| **CIC Bell DNS EXF 2021** (CICBellEXFDNS2021) | 2021 | Low-rate covert data exfiltration over DNS tunnels. | 3 (heavy attack, light attack, benign) | pcap CSV | 270.8 MB | [link](https://www.unb.ca/cic/datasets/dns-exf-2021.html) |
+| **DNS over HTTPS** (CIRA-CIC-DoHBrw2020) | 2020 | Encrypted DNS-over-HTTPS traffic for covert-channel and tunnel detection. | 3 (benign DoH, malicious DoH, non-DoH) | pcap CSV | — | [link](https://www.unb.ca/cic/datasets/dohbrw-2020.html) |
+| **CIC Bell DNS 2021** (CICBellDNS2021) | — | Malicious-domain detection using lexical, DNS-statistical, and third-party features. | 4 (benign, spam, phishing, malware) | CSV | 400K benign / 13,011 malicious samples | [link](https://www.unb.ca/cic/datasets/dns-2021.html) |
+#### Botnet
+| Dataset | Year | Description | Classes | Format | Size | Link |
+|---|---|---|---|---|---|---|
+| **ISCX botnet dataset 2014** (ISCX-Bot-2014) | 2014 | Composite botnet detection benchmark mixing benign traffic with multiple botnet families. | 7 (train) / 16 (test) | archive | 5.3 GB train / 8.5 GB test | [link](https://www.unb.ca/cic/datasets/botnet.html) |
+#### IDS / IoT
+| Dataset | Year | Description | Classes | Format | Size | Link |
+|---|---|---|---|---|---|---|
+| **Attack vectors in healthcare** (CICIoMT 2024) | 2024 | Security evaluation for Internet-of-Medical-Things devices over Wi-Fi/MQTT and Bluetooth Low Energy. | 5 (DDoS, DoS, Recon, MQTT, spoofing) | pcap CSV | 10 GB | [link](https://www.unb.ca/cic/datasets/iomt-dataset-2024.html) |
+| **CIC EV charger attack dataset 2024** (CICEVSE2024) | 2024 | EV-charging-station security: behavioural analysis and binary/multi-class anomaly detection from ~900 hardware performance counters. | multi | CSV | 2.6 GB | [link](https://www.unb.ca/cic/datasets/evse-dataset-2024.html) |
+| **A real-time IoT attack benchmark** (CICIoT 2023) | 2023 | Large-scale IoT attack benchmark with 33 attacks across 105 IoT devices. | 7 (DDoS, DoS, Recon, Web, Brute Force, Spoofing, Mirai) | pcap CSV | multi | [link](https://www.unb.ca/cic/datasets/iotdataset-2023.html) |
+| **iCloud Private Relay traffic-analysis dataset** | 2023 · UMass | Website-fingerprinting and traffic-correlation experiments against Apple iCloud Private Relay (UMass, ASIACCS '23). | n/a | pcap CSV | 1.8 GB | [link](https://skulddata.cs.umass.edu/traces/network/ipr_asiaccs23.tar.xz) |
+| **IoT profiling dataset** (CICIoT 2022) | 2022 | IoT device profiling, behavioural analysis and identification across Power/Idle/Interactive/Scenario/Active/Attack regimes. | 3 device classes (Audio, Camera, Home Automation) | pcap CSV | <5 GB | [link](https://www.unb.ca/cic/datasets/iotdataset-2022.html) |
+| **IPS/IDS dataset on AWS** (CSE-CIC-IDS2018) | 2018 | Network-based anomaly IDS evaluation on AWS-hosted infrastructure. | 7 attack classes (Brute Force, Heartbleed, Botnet, DoS, DDoS, Web, Infiltration) | CSV | — | [link](https://www.unb.ca/cic/datasets/ids-2018.html) |
+| **Intrusion detection evaluation dataset** (CIC-IDS2017) | 2017 | IDS/IPS evaluation benchmark with diverse attack scenarios. | 8 (FTP/SSH brute force, DoS, Heartbleed, Web, Infiltration, Botnet, DDoS) | pcap CSV | ~51.1 GB | [link](https://www.unb.ca/cic/datasets/ids-2017.html) |
+| **CSIC 2010** | 2010 | HTTP web-attack detection benchmark. | — | — | — | [link](https://drive.google.com/drive/folders/1CDjUmDqUid6vZvMuPQxWLTGXpMT2DfZy) |
+| **Enriching IoT datasets** (Enriched_IOT_Datasets) | — | Horizontally and vertically enriched combinations of Bot-IoT and TON-IoT for security analytics. | multi | CSV | — | [link](https://www.unb.ca/cic/datasets/enricheddataset.html) |
+### Application & Mobile-App Identification
+| Dataset | Year | Description | Classes | Format | Size | Link |
+|---|---|---|---|---|---|---|
+| **CSTNET 2023** | 2023 · CAS / CSTNET | Anonymised institutional Internet traffic from CSTNET (CAS). | — | json | — | [link](https://drive.google.com/drive/folders/1BUo5TMRuXNvTqNYy0RLeHk4l4Q3BuzSk) |
+| **CW-100 2018** | 2023 | Encrypted mobile-app classification benchmark (100 apps). | — | json | — | [link](https://drive.google.com/drive/folders/15_bn19jej17RY1hpzovqVgABiZnLrJ0e) |
+| **NUDT MobileTraffic Dataset** | 2023 · Network Forensics Research Lab | Anonymised mobile-app traffic with three label levels: 22 categories, 350 apps, 9 brands × 94 phone models. | 22 traffic categories / 350 apps / 9 brands / 94 models | pcap CSV | 293 GB | [link](https://github.com/Abby-ZS/NUDT_MobileTraffic) |
+| **Application Based Network Traffic Dataset** | 2021 | Packet captures of 22 commonly used desktop applications (Kaggle). | 22 applications | PCAP | 6.96 GB | [link](https://www.kaggle.com/datasets/applicationdataset/applicationbasednetworktrafficdataset) |
+| **CrossNet2021** | 2021 | Cross-network mobile-app classification benchmark used by ProGraph. | — | — | — | [link](https://github.com/SecTeamPolaris/ProGraph) |
+| **MaMPF** | 2018 · Chang Liu; Zigang Cao; Gang Xiong; Gaopeng Gou; Siu-Ming Yiu; Longtao He | Encrypted-traffic classification using multi-attribute Markov probability fingerprints over length-block sequences. | — | — | 950,000+ encrypted flows | [link](https://github.com/WSPTTH/MaMPF) |
+| **Cross-Platform iOS/Android Apps (Northeastern Recon)** | 2017 · The Northeastern University | Cross-country (China / India / US) mobile-app traffic captured on Nexus 5 (Android 6) and iPhone 5 / 5s (iOS 10). | — | pcap | — | [link](https://recon.meddle.mobi/cross-market.html) |
+| **International Privacy Risks of Mobile Apps** | 2017 · Jingjing Ren, Daniel J. Dubois, David Choffnes | Manual five-minute interaction traces for the top 100 iOS and Android apps to study cross-app privacy leakage. | — | pcap | 8 GB | [link](https://recon.meddle.mobi/cross-market.html) |
+| **ANDRUBIS** | 2016 · Martina Lindorfer, Matthias Neugschwandtner, Lukas Weichselbaum, Yanick Fratantonio, Victor van der Veen, Christian Platzer | Static + dynamic analysis traces for over 1M Android apps (~40 % malicious). | — | CSV pcap | 1,000,000+ Android apps | [link](https://drive.google.com/drive/folders/1IXa3IJS9zJS4vggpyU7yda8f7jZjz4gB) |
+| **USTC TFC 2016** | 2016 · USTC | Encrypted-traffic classification benchmark from USTC. | — | pcap | — | [link](https://drive.google.com/drive/folders/15zB0b4uS5OL5-xLc_uajb_XVLuvwO4ab) |
+| **UNIBS-2009** | 2009 · U. Brescia | Edge-router traffic from a U. Brescia campus network covering 20 workstations. | multi | by request | 27 GB raw / 2.7 GB anonymised + payload-stripped | [link](http://netweb.ing.unibs.it/ntw/) |
+| **Moore & Zuev hand-labelled flows** | 2005 · Andrew W. Moore, Denis Zuev (Queen Mary, University of London) | Hand-labelled flow dataset (10 application classes) accompanying Moore & Zuev's SIGMETRICS '05 paper, in WEKA format. | — | paid | 5–17 MB (gzip) | [link](https://www.eecs.qmul.ac.uk/~andrewsm/papers/rr-05-13.pdf) |
+| **MAWI Working Group Traffic Archive** | 1999-2024 · WIDE Project | Long-running (1999–) backbone Internet trace archive captured via tcpdump on the WIDE backbone, with anonymised IPs. | — | pcap | — | [link](http://www.wide.ad.jp/) |
+| **MAWILab** | daily-updated · WIDE Project | Daily-updated network anomaly labels derived from MAWI traces by combining multiple independent detectors with a graph-based scheme. | — | web view + CSV | — | [link](http://www.fukuda-lab.org/mawilab/) |
+### Concept Drift
+| Dataset | Year | Description | Classes | Format | Size | Link |
+|---|---|---|---|---|---|---|
+| **APP-53 2023** | 2023 | Mobile-app traffic with 53 classes for concept-drift evaluation. | — | — | — | [link](https://drive.google.com/drive/folders/1ClmdDmbb8RcxtOvZRhJuWtRtnkyNQgzp) |
+### Malware Traffic
+| Dataset | Year | Description | Classes | Format | Size | Link |
+|---|---|---|---|---|---|---|
+| **Evasive PDF Mal 2022** (Evasive-PDFMal2022) | 2022 | Evasive malicious-PDF detection benchmark; evasive samples are filtered via K-means over 32 features. | multi | archive | 1.2 GB | [link](https://www.unb.ca/cic/datasets/pdfmal-2022.html) |
+| **Malware Memory Analysis** (CIC MalMem 2022) | 2022 | Memory-dump benchmark for detecting obfuscated malware. | multi | CSV | 358 MB | [link](https://www.unb.ca/cic/datasets/malmem-2022.html) |
+| **Android Malware** (CIC MalDroid 2020) | 2020 | Five-class Android malware benchmark (Adware, Banking, SMS, Riskware, Benign) with semi-supervised baselines. | 5 (Adware, Banking, SMS, Riskware, Benign) | APK files Capturing-logs CSV files: | 111 GB+ | [link](https://www.unb.ca/cic/datasets/maldroid-2020.html) |
+| **CCCS-CIC-AndMal2020 (Android Malware 2020)** | 2020 | Android malware benchmark co-developed with the Canadian Centre for Cyber Security; 200 K malicious + 200 K benign apps. | 14 categories / 191 malware families | CSV | 400 K apps | [link](https://www.unb.ca/cic/datasets/andmal2020.html) |
+| **Android Adware and General Malware Dataset** (CIC-AAGM2017) | 2017 | Android adware and general-malware network traffic captured on real devices. | 3 (Adware, General Malware, Benign) | pcap CSV | 9.1 GB | [link](https://www.unb.ca/cic/datasets/android-adware.html) |
+| **Android Malware Dataset** (CIC-AndMal2017) | 2017 | Android malware traffic captured on real smartphones to evade emulator detection. | 4 (Adware, Ransomware, Scareware, SMS) | pcap | — | [link](https://www.unb.ca/cic/datasets/andmal2017.html) |
+
+## Tools
+### Packet Parsing
+| Tool | Type | Language | Description | Link |
+|---|---|---|---|---|
+| **Wireshark** | GUI | C / C++ | De-facto graphical network-protocol analyser; deep dissection of 3000+ protocols, capture filters (BPF) and display filters, follow-stream view, decryption (TLS, WPA, …), and a rich plug-in ecosystem. | [link](https://www.wireshark.org/) |
+| **tshark** | CLI | C / C++ | Command-line companion to Wireshark sharing the same dissector library; ideal for batch processing and scripted feature extraction (e.g. `tshark -r in.pcap -T fields -e ip.src -e tls.handshake.extensions_server_name`). | [link](https://www.wireshark.org/docs/man-pages/tshark.html) |
+| **tcpdump** | CLI | C | Veteran libpcap-based capture and inspection tool; lightweight, ubiquitous on UNIX, the canonical source for raw pcap captures. | [link](https://www.tcpdump.org/) |
+| **Zeek** | CLI / framework | C++ | Stateful protocol analyser (formerly Bro) that turns live or replayed traffic into structured logs (conn / dns / ssl / http / files). Many academic NIDS datasets ship Zeek-derived features. | [link](https://zeek.org/) |
+| **Scapy** | Python library | Python | Programmable packet-manipulation framework — sniff, craft, send, fuzz and dissect arbitrary protocols; widely used for traffic generation in research code. | [link](https://scapy.net/) |
+| **PyShark** | Python library | Python | Pythonic wrapper around tshark; exposes the full Wireshark dissector tree as Python objects for scripted field-level analysis. | [link](https://github.com/KimiNewt/pyshark) |
+| **dpkt** | Python library | Python | Pure-Python, zero-dependency pcap parser focused on L2–L4 plus common L7 protocols; often 10–50× faster than PyShark for ML feature extraction loops. | [link](https://github.com/kbandla/dpkt) |
+| **nFStream** | Python library | Python / C | High-throughput pcap-to-flow streaming with 80+ statistical features and optional nDPI application identification; modern alternative to CICFlowMeter for ML pipelines. | [link](https://github.com/nfstream/nfstream) |
+| **flowcontainer** | Python library | Python | Lightweight tshark wrapper that turns a pcap into per-flow records (5-tuple, packet sizes, inter-arrival times, payload bytes, TLS SNI, HTTP host, …) ready for ML feature engineering. | [link](https://github.com/jmhIcoding/flowcontainer) |
+### Packet Splitting / Editing
+| Tool | Type | Language | Description | Link |
+|---|---|---|---|---|
+| **SplitCap** | CLI (Windows / .NET) | C# | Splits a pcap into smaller pcaps per flow, host pair, MAC, port, packet count or seconds; widely cited preprocessing baseline. | [link](https://www.netresec.com/?page=SplitCap) |
+| **splitpcap** | CLI / Python library | Python | Open-source SplitCap-style tool with extra modes (per-session, per-direction, sampling); cross-platform and embeddable in Python pipelines. | [link](https://github.com/jmhIcoding/splitpcap) |
+| **netkit** | CLI | Rust | High-throughput pcap manipulation toolkit (split / merge / extract / stats) written in Rust; targets million-flow corpora where Python tooling becomes a bottleneck. | [link](https://github.com/duskmoon314/netkit) |
+| **ShieldGPT pcap_tool** | CLI | C++ | Pcap preprocessing utilities released alongside ShieldGPT — flow splitting, sampling, filtering, anonymisation and dataset packaging for LLM-based traffic analysis. | [link](https://github.com/wangtz19/ShieldGPT/tree/master/pcap_tool) |
+| **editcap** | CLI (ships with Wireshark) | C | Pcap surgery swiss-army knife: split by chunk count or seconds, trim time ranges, fix timestamps, change link-layer encapsulation, anonymise MACs, deduplicate, and convert between pcap/pcapng. | [link](https://www.wireshark.org/docs/man-pages/editcap.html) |
+| **mergecap** | CLI (ships with Wireshark) | C | Counterpart to editcap: merge multiple pcaps preserving timestamps; concatenate or interleave by capture time. | [link](https://www.wireshark.org/docs/man-pages/mergecap.html) |
+| **pcapfix** | CLI | C | Repairs truncated or corrupted pcap and pcapng files; useful when reusing legacy academic captures with broken global / packet headers. | [link](https://github.com/Rup0rt/pcapfix) |
+### Flow Feature Extraction
+| Tool | Type | Language | Description | Link |
+|---|---|---|---|---|
+| **CICFlowMeter** | CLI / library | Java | Reference flow-feature extractor used to label every CIC-* dataset (CIC-IDS2017, CIC-DDoS2019, …); the 80-feature schema mirrored by most published NIDS baselines. | [link](https://github.com/ahlashkari/CICFlowMeter) |
+| **Argus** | CLI / daemon | C | Long-running bidirectional flow-record generator producing detailed per-flow records (counts, bytes, timing, performance metrics); standard for academic flow analytics for two decades. | [link](https://openargus.org/) |
+| **Tranalyzer2** | CLI | C | Modular plug-in-based flow analyzer that emits 700+ features per flow; supports live capture, offline pcap, and IPv6. | [link](https://tranalyzer.com/) |
+| **joy** | CLI | C | Cisco-released flow extractor designed for encrypted-traffic analysis: TLS metadata, byte distribution, packet length / inter-arrival sequences, DNS / HTTP enrichment. | [link](https://github.com/cisco/joy) |
+### Traffic Replay / Generation
+| Tool | Type | Language | Description | Link |
+|---|---|---|---|---|
+| **tcpreplay** | CLI suite | C | Replay pcaps onto live interfaces at controlled rates with `tcpreplay`, rewrite addresses with `tcprewrite`, and run interactive client/server replay with `tcpliveplay`. The default tool for testbed-based NIDS evaluation. | [link](https://tcpreplay.appneta.com/) |
+| **MoonGen** | CLI | Lua / DPDK | Scriptable line-rate (10–100 Gbps) packet generator built on DPDK; the standard reproducible testbed used in NSDI / SIGCOMM dataplane evaluations. | [link](https://github.com/emmericp/MoonGen) |
+| **TRex** | CLI / Python API | C++ / Python (DPDK) | Cisco's stateful traffic generator: supports realistic application emulation, multi-million flow scaling, and a Python client for orchestrated experiments. | [link](https://trex-tgn.cisco.com/) |
+### Anonymization
+| Tool | Type | Language | Description | Link |
+|---|---|---|---|---|
+| **CryptoPAn** | C library / CLI | C | Prefix-preserving IP-address anonymisation; the de-facto scheme cited in MAWI, CAIDA and most anonymised-trace dataset releases. | [link](https://en.wikipedia.org/wiki/Crypto-PAn) |
+| **tcpdpriv** | CLI | C | Older but still-used trace anonymiser with flexible per-field policies (drop / random / prefix-preserving). The original tool used by the WIDE / MAWI archives. | [link](http://ita.ee.lbl.gov/html/contrib/tcpdpriv.html) |
+| **PktAnon** | CLI | C++ | Protocol-aware pcap anonymiser from KIT with an XML/YAML profile describing which headers, payloads, MACs and IPs to strip or pseudonymise. | [link](https://www.tm.kit.edu/software/pktanon/) |
 
 ## License
 [![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
